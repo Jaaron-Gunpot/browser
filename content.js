@@ -16,7 +16,7 @@ function replacer(parentElement,oldTextNode,newText){
     let text = oldTextNode.nodeValue;
     let replacedText = text.replace(/\w/gi, newText);
 
-    if (replacedText !== text) {
+    if (replacedText != text) {
         parentElement.replaceChild(document.createTextNode(replacedText), oldTextNode);
         parentElement.style.backgroundColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
     }
